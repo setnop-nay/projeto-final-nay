@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <!-- Menu no topo -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">WaveBox</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/registro">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Formulário de cadastro -->
+    <div class="registro-container">
+        <h2>Cadastro</h2>
+        <form th:action="@{/registro}" method="post">
+            <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+            <input type="text" id="username" name="username" placeholder="Usuário" required>
+            <input type="password" id="password" name="password" placeholder="Senha" required>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+</body>
+</html>

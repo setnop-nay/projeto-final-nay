@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Meus Pedidos</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <!-- Menu no topo -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">WaveBox</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pedidos">Meus Pedidos</a></li>
+                    <li><a href="/caixas">Caixas</a></li>
+                    <li><a href="/carrinho">Carrinho</a></li>
+                    <li><a href="/logout">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Lista de Pedidos -->
+    <div class="pedidos-container">
+        <h2>Meus Pedidos</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID Pedido</th>
+                    <th>Data</th>
+                    <th>Total</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="pedido : ${pedidos}">
+                    <td th:text="${pedido.idPedido}"></td>
+                    <td th:text="${pedido.dataPedido}"></td>
+                    <td th:text="${pedido.total}"></td>
+                    <td th:text="${pedido.status}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

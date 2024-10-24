@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <!-- Menu no topo -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">WaveBox</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/pedidos">Meus Pedidos</a></li>
+                    <li><a href="/caixas">Caixas</a></li>
+                    <li><a href="/carrinho">Carrinho</a></li>
+                    <li><a href="/logout">Sair</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo do Dashboard -->
+    <div class="dashboard-container">
+        <h2>Bem-vindo, <span th:text="${username}">Usuário</span></h2>
+        <div class="dashboard-info">
+            <h3>Minhas Caixas</h3>
+            <ul>
+                <li><a href="/caixas">Ver Caixas</a></li>
+            </ul>
+        </div>
+
+        <div class="dashboard-info">
+            <h3>Meus Pedidos</h3>
+            <ul>
+                <li><a href="/pedidos">Ver Pedidos</a></li>
+            </ul>
+        </div>
+
+        <div class="dashboard-info">
+            <h3>Meu Carrinho</h3>
+            <a href="/carrinho">Ver Carrinho</a>
+        </div>
+    </div>
+
+</body>
+</html>

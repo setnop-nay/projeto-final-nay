@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+
+    <!-- Menu no topo -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="/" class="logo">WaveBox</a>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/registro">Cadastro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Formulário de login -->
+    <div class="login-container">
+        <h2>Login nfjsdnfjunf</h2>
+        <form th:action="@{/login}" method="post">
+            <input type="text" id="username" name="username" placeholder="Usuário" required>
+            <input type="password" id="password" name="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <div th:if="${param.error}" class="error-message">
+            <p style="color: red;">Usuário ou senha inválidos!</p>
+        </div>
+    </div>
+
+</body>
+</html>
