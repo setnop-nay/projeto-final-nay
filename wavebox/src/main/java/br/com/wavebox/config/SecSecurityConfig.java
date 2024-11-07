@@ -40,6 +40,7 @@ public class SecSecurityConfig {
 	           )
 	            .formLogin(formLogin -> formLogin	            		
 	                    .defaultSuccessUrl("/home", true)
+	                    .loginPage("/login")
 	                    .permitAll()
 	            )
 	            .rememberMe(rememberMe -> rememberMe.key("AbcdEfghIjkl..."))

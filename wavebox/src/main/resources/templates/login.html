@@ -12,18 +12,20 @@
         <div class="navbar-container">
             <a href="/" class="logo">WaveBox</a>
             <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/registro">Cadastro</a></li>
-                </ul>
+               
+                    <a href="/">Home</a>
+                    <a href="/login">Login</a>
+                    <a href="/registro">Cadastro</a>
+               
             </nav>
+   
+
         </div>
     </header>
 
     <!-- Formulário de login -->
     <div class="login-container">
-        <h2>Login nfjsdnfjunf</h2>
+        <h2>Login</h2>
         <form th:action="@{/login}" method="post">
             <input type="text" id="username" name="username" placeholder="Usuário" required>
             <input type="password" id="password" name="password" placeholder="Senha" required>
