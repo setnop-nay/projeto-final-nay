@@ -1,0 +1,125 @@
+/* Define o gradiente de fundo */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(255, 255, 255)); /* Gradiente de azul claro para azul oceano */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+ nav {
+            background-color:  #06c1b2f3;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+/* Estilizando o formulário */
+form {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco com leve transparência */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* Estilo para os labels */
+label {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 7px;
+    display: block;
+}
+
+/* Estilo para os campos de input */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    background-color: #f9f9f9;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus {
+    border-color: rgb(255, 255, 255); /* Foco na borda com azul oceano */
+    background-color: #e6f7ff;
+    outline: none;
+}
+
+/* Estilo para o botão de submit */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(192, 192, 192);
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: rgb(255, 255, 255); /* Cor de fundo mais escura ao passar o mouse */
+}
+
+/* Estilizando os campos dentro de fieldset (endereço) */
+fieldset {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+/* Legenda para o fieldset */
+legend {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
+/* Estilos para separar os campos dentro do fieldset */
+fieldset label {
+    margin-top: 8px;
+}
+
+/* Adicionando espaçamento entre os campos */
+br {
+    margin-bottom: 10px;
+}
+
+/* Responsividade: ajustes em telas menores */
+@media (max-width: 600px) {
+    form {
+        padding: 15px;
+        width: 90%;
+    }
+
+    button[type="submit"] {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}

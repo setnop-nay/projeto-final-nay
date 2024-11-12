@@ -1,37 +1,59 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/registro.css">
 </head>
 <body>
+	
+	<nav>
+    <a href="home">Home</a>
+	</nav>
+   <h2>Cadastro de Usuário</h2>
+    
+    
+    <form class="form-horizontal" action="processar_cadastro.php" method="POST">
+		<div class="container">
+        <!-- Campo para o Login -->
+        <label for="login">Login (Nome de Usuário):</label>
+        <input class="form-control" type="text" id="login" name="login" required maxlength="50" placeholder="Digite seu login" pattern="[a-zA-Z0-9_]{5,50}">
+        <br><br>
 
-    <!-- Menu no topo -->
-    <header class="navbar">
-        <div class="navbar-container">
-            <a href="/" class="logo">WaveBox</a>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/registro">Cadastro</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        <!-- Campo para Nome Completo -->
+        <label for="nome_completo">Nome Completo:</label>
+        <input type="text" id="nome_completo" name="nome_completo" required maxlength="100" placeholder="Digite seu nome completo">
+        <br><br>
 
-    <!-- Formulário de cadastro -->
-    <div class="registro-container">
-        <h2>Cadastro</h2>
-        <form th:action="@{/registro}" method="post">
-            <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
-            <input type="text" id="username" name="username" placeholder="Usuário" required>
-            <input type="password" id="password" name="password" placeholder="Senha" required>
-            <input type="email" id="email" name="email" placeholder="Email" required>
-            <button type="submit">Cadastrar</button>
-        </form>
-    </div>
+        <!-- Campo para CPF -->
+        <label for="cpf">CPF:</label>
+        <input type="text" id="cpf" name="cpf" required maxlength="14" placeholder="Digite seu CPF" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}">
+        <br><br>
 
+        <!-- Campo para Email -->
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" required maxlength="100" placeholder="Digite seu e-mail">
+        <br><br>
+
+        <!-- Campo para Número de Celular -->
+        <label for="celular">Número de Celular:</label>
+        <input type="tel" id="celular" name="celular" required maxlength="15" placeholder="Digite seu número de celular" pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}">
+        <br><br>
+   
+        <!-- Campo para Senha -->
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" name="senha" required minlength="8" placeholder="Digite sua senha">
+        <br><br>
+
+        <!-- Campo para Repetir Senha -->
+        <label for="repetir_senha">Repetir Senha:</label>
+        <input type="password" id="repetir_senha" name="repetir_senha" required minlength="8" placeholder="Repita a senha">
+        <br><br>
+
+        <!-- Botão de Enviar -->
+        <button type="submit">Cadastrar</button>
+    </form>
+</div>
 </body>
 </html>

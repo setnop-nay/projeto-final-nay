@@ -56,10 +56,10 @@
 
         /* Banner */
         .banner {
-            background-image: url('imagens/backgroundbox.jpeg');
+            background-image: url('imagens/background2.jpg');
             background-size: cover;
             background-position: center;
-            height: 200px;
+            height:400px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -67,9 +67,7 @@
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
         }
 
-        .banner h2 {
-            font-size: 3em;
-        }
+      
 
         /* Seções */
         .section {

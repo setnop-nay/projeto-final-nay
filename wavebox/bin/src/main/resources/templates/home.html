@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Página Principal</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Box</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="" href="imagens/backgroundbox.jpeg">
+   
+
+<style>
+		body { 
+			background-image: url('imagens/backgroundbox.jpeg');
+			background-repeat: no-repeat;
+			background-size: cover;
+            background-position: center;
+	}
+	.footer {
+	position:fixed;
+	left:0;
+	bottom: 0;
+	width: 100%;
+	
+	}
+</style>
 </head>
+
+<header>
+	
+    <h1>Wave Box </h1>
+    <p>Caixas de assinatura com produtos exclusivos!</p>
+</header>
 <body>
+<nav>
+    <a href="home">Home</a>
+    <a href="sobre">Sobre</a>
+    <a href="produto">Produto</a>
+    <a href="login">Login</a>
+    <a href="registro">Cadastro</a>
+</nav>
 
-    <!-- Menu no topo -->
-    <header class="navbar">
-        <div class="navbar-container">
-            <a href="/" class="logo">WaveBox</a>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/registro">Cadastro</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Conteúdo Principal -->
-    <div class="home-container">
-        <h1>Bem-vindo ao WaveBox!</h1>
-        <p>Explore nossos produtos e comece sua assinatura agora mesmo.</p>
-    </div>
+<div class="banner">
+    <h2>Assine já e receba itens todo mês!!!!!!!!!!</h2>
+</div>
 
 </body>
+
+<footer class="footer">
+    <p>&copy; 2024 Wave box. Todos os direitos reservados.</p>
+</footer>
+
 </html>

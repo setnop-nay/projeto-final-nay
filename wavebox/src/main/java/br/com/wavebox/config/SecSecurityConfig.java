@@ -39,7 +39,7 @@ public class SecSecurityConfig {
 	            .anyRequest().authenticated()
 	           )
 	            .formLogin(formLogin -> formLogin	            		
-	                    .defaultSuccessUrl("/home", true)
+	                    .defaultSuccessUrl("/dashboard", true)
 	                    .loginPage("/login")
 	                    .permitAll()
 	            )
