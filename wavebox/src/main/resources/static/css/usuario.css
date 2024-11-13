@@ -159,11 +159,4 @@ nav a:hover {
         margin: 0 10px;
     }
 
-    .section h2 {
-        font-size: 2em;
-    }
-
-    .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ajuste a largura mínima em telas menores */
-   }
-   }
+    .section h

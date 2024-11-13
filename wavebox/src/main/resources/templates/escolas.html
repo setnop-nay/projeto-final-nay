@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 
@@ -18,12 +17,16 @@
    
  
     
-		<form name="cadastrar_usuario" class="form-horizontal"  method="POST" style="margin: 10px" th:action="@{/login}" th:object="${user}">
+		<form name="cadastrar_usuario" class="form-horizontal"  method="POST" style="margin: 10px" th:action="@{/teste}" th:object="${user}">
 		<div class="container">
+
+        <label for="login">Login (Nome de Usuário):</label>
+        <input class="form-control" type="text" id="login" name="login" required maxlength="50" placeholder="Digite seu login" pattern="[a-zA-Z0-9_]{5,50}">
+        <br><br>
 
 
         <label for="nome_completo">Nome Completo:</label>
-        <input type="text" id="nome" name="nome_completo" required maxlength="100" placeholder="Digite seu nome completo">
+        <input type="text" id="nome_completo" name="nome_completo" required maxlength="100" placeholder="Digite seu nome completo">
         <br><br>
 
  
@@ -57,5 +60,3 @@
 
 </body>
 </html>
-
-

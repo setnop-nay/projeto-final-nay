@@ -1,50 +1,75 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área do Usuário</title>
+    <link rel="stylesheet" href="css/usuario.css"> <!-- Inclua seu CSS aqui -->
 </head>
 <body>
 
-    <!-- Menu no topo -->
-    <header class="navbar">
-        <div class="navbar-container">
-            <a href="/" class="logo">WaveBox</a>
-            <nav>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/pedidos">Meus Pedidos</a></li>
-                    <li><a href="/caixas">Caixas</a></li>
-                    <li><a href="/carrinho">Carrinho</a></li>
-                    <li><a href="/logout">Sair</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+<header>
+    <h1>Bem-vindo à sua Área do Usuário</h1>
+    <p>Gerencie suas informações e pedidos</p>
+</header>
 
-    <!-- Conteúdo do Dashboard -->
-    <div class="dashboard-container">
-        <h2>Bem-vindo, <span th:text="${username}">Usuário</span></h2>
-        <div class="dashboard-info">
-            <h3>Minhas Caixas</h3>
-            <ul>
-                <li><a href="/caixas">Ver Caixas</a></li>
-            </ul>
-        </div>
+<nav>
+    <a href="/home">Home</a>
+    <a href="/perfil">Meu Perfil</a>
+    <a href="/assinaturas">Minhas Assinaturas</a>
+    <a href="/pedidos">Meus Pedidos</a>
+    <a href="/logout">Sair</a>
+</nav>
 
-        <div class="dashboard-info">
-            <h3>Meus Pedidos</h3>
-            <ul>
-                <li><a href="/pedidos">Ver Pedidos</a></li>
-            </ul>
-        </div>
+<section class="section" id="perfil">
+    <h2>Alterar Informações</h2>
+    <form action="/usuarios/atualizar" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
 
-        <div class="dashboard-info">
-            <h3>Meu Carrinho</h3>
-            <a href="/carrinho">Ver Carrinho</a>
-        </div>
-    </div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" required>
+
+        <label for="endereco">Endereço:</label>
+        <input type="text" id="endereco" name="endereco" required>
+
+        <button type="submit">Atualizar Informações</button>
+    </form>
+</section>
+
+<section class="section" id="excluir-conta">
+    <h2>Excluir Conta</h2>
+    <p>Se você deseja excluir sua conta, clique no botão abaixo.</p>
+    <form action="/usuarios/excluir" method="POST">
+        <button type="submit" style="background-color: red; color: white;">Excluir Conta</button>
+    </form>
+</section>
+
+<section class="section" id="assinaturas">
+    <h2>Minhas Assinaturas</h2>
+    <p>Aqui você pode ver suas assinaturas ativas:</p>
+    <ul>
+        <li>Assinatura Mensal - R$ 29,90</li>
+        <li>Assinatura Anual - R$ 299,90</li>
+        <!-- Adicione mais assinaturas conforme necessário -->
+    </ul>
+</section>
+
+<section class="section" id="rastrear-pedidos">
+    <h2>Rastrear Pedidos</h2>
+    <form action="/pedidos/rastrear" method="GET">
+        <label for="pedidoId">ID do Pedido:</label>
+        <input type="text" id="pedidoId" name="pedidoId" required>
+        <button type="submit">Rastrear Pedido</button>
+    </form>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2023 Sua Empresa. Todos os direitos reservados.</p>
+</footer>
 
 </body>
 </html>

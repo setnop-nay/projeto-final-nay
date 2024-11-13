@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
     <!-- Menu no topo -->
     <header class="navbar">
         <div class="navbar-container">
-            <a href="/" class="logo">WaveBox</a>
+            <a href="/" class="logo">Wave Box</a>
             <nav>
                
                     <a href="/">Home</a>
-                    <a href="/login">Login</a>
-                    <a href="/registro">Cadastro</a>
+                    <a href="/registro">Cadastre-se</a> 
                
             </nav>
    
@@ -34,6 +33,7 @@
         <div th:if="${param.error}" class="error-message">
             <p style="color: red;">Usuário ou senha inválidos!</p>
         </div>
+	
     </div>
 
 </body>

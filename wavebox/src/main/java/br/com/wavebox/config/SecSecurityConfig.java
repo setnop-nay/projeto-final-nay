@@ -32,7 +32,7 @@ public class SecSecurityConfig {
 	 
 	    http.authorizeHttpRequests(
 	            auth -> auth
-	            .requestMatchers("/home", "/registro", "/", "/css/**", "/produto","/sobre","/contato", "/imagens/**").permitAll()
+	            .requestMatchers("/home", "/registro", "/dashboard","/", "/css/**", "/produto","/sobre","/contato", "/imagens/**","/escolas","/teste","/cadastrar_usuario").permitAll()
 	            .requestMatchers("/pedido").hasAnyAuthority("cliente","admin")		         
 	            .requestMatchers("/admin/**").hasAnyAuthority("admin")	
 	
@@ -54,7 +54,7 @@ public class SecSecurityConfig {
 	  throws Exception {
 		//Serve de exemplo para gerar um senha criptografada
 		BCryptPasswordEncoder b = new BCryptPasswordEncoder();
-		System.out.println(b.encode("123456"));
+		System.out.println(b.encode("12345678"));
 		//Cripitografa a senha para salvar no banco de dados
 		auth.userDetailsService(userDetailServiceImpl).passwordEncoder(new BCryptPasswordEncoder());
 	 
